@@ -4,6 +4,6 @@
 
 <script>
 export default {
-  name: "t-hello",
+  name: "THello",
 };
 </script>

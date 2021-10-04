@@ -4,7 +4,7 @@
 
 <script>
 export default {
-  name: "t-counter",
+  name: "TCounter",
   data() {
     return {
       counter: 0,

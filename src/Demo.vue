@@ -1,6 +1,7 @@
 <template>
   <t-hello />
   <t-counter />
+  <TCounter />
 </template>
 
 <script>
