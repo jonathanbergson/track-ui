@@ -1,10 +1,10 @@
-import Counter from "./Counter";
+import Checkbox from "./Checkbox";
 
 import { use, registerComponent } from "../../utils/plugins";
 
 const Plugin = {
   install(Vue) {
-    registerComponent(Vue, Counter);
+    registerComponent(Vue, Checkbox);
   },
 };
 
@@ -12,4 +12,4 @@ use(Plugin);
 
 export default Plugin;
 
-export { Counter as TCounter };
+export { Checkbox as TCheckbox };

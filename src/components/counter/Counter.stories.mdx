@@ -1,0 +1,36 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import Counter from "./Counter"
+
+<Meta title="Components/Counter" component={Counter} />
+
+# Default
+
+Um contador muito completo.
+
+<Story name="Default">
+  {() => {
+    return {
+      components: { Counter },
+      template: `
+        <Counter />
+      `,
+    };
+  }}
+</Story>
+
+# Group
+
+<Story name="Group">
+  {() => {
+    return {
+      components: { Counter },
+      template: `
+        <div>
+          <Counter />
+          <Counter />
+          <Counter />
+        </div>
+      `,
+    };
+  }}
+</Story>

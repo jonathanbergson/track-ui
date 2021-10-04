@@ -1,0 +1,36 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import Checkbox from "./Checkbox"
+
+<Meta title="Components/Checkbox" component={Checkbox} />
+
+# Default
+
+Um contador muito completo.
+
+<Story name="Default">
+  {() => {
+    return {
+      components: { Checkbox },
+      template: `
+        <Checkbox label="Default" />
+      `,
+    };
+  }}
+</Story>
+
+# Status
+
+<Story name="Status">
+  {() => {
+    return {
+      components: { Checkbox },
+      template: `
+        <div>
+          <Checkbox label="Default" />
+          <Checkbox label="Selected" selected />
+          <Checkbox label="Error" error />
+        </div>
+      `,
+    };
+  }}
+</Story>
