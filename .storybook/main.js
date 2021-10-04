@@ -7,4 +7,12 @@ module.exports = {
     "@storybook/addon-links",
     "@storybook/addon-essentials"
   ],
+  webpackFinal: async (config, { configType }) => {
+    config.module.rules.push({
+      test: /\.scss$/,
+      use: ["vue-style-loader", "css-loader", "sass-loader"]
+    });
+
+    return config;
+  }
 }
