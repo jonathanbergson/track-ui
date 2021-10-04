@@ -1,0 +1,69 @@
+
+  body {
+    background-color: lightblue;
+  }
+
+:root {
+--track-color-brand-primary: #219653;
+--track-color-brand-primary-darkest: #1e854a;
+--track-color-brand-primary-lightest: #d1f1dc;
+--track-color-brand-secondary: #aa14a7;
+--track-color-positive-darkest: #267c10;
+--track-color-negative-lightest: #ebb5b5;
+--track-color-positive-lightest: #d1f1dc;
+--track-color-positive-medium: #2d9a11;
+--track-color-neutral-darkest: #f9440d;
+--track-color-neutral-medium: #fd6e1a;
+--track-color-neutral-lightest: #fed3ba;
+--track-color-negative-darkest: #990808;
+--track-color-gray-darkest: #333333;
+--track-color-gray-medium: #828282;
+--track-color-gray-lightest: #d9d9d9;
+--track-color-negative-medium: #bf0909;
+--track-color-white: #ffffff;
+--track-color-bluegray-10: #f0f3f6;
+--track-color-bluegray-20: #d9e2ec;
+--track-color-bluegray-30: #bcccdc;
+--track-color-bluegray-40: #9fb3c8;
+--track-color-bluegray-50: #829ab1;
+--track-color-bluegray-100: #102a43;
+--track-color-bluegray-90: #243b53;
+--track-color-bluegray-80: #334e68;
+--track-color-bluegray-70: #486581;
+--track-color-bluegray-60: #627d98;
+
+--track-font-family-base: "Inter";
+--track-font-family-brand: "Univia Pro";
+
+--track-font-size-xs: 14px;
+--track-font-size-xxs: 12px;
+--track-font-size-sm: 16px;
+--track-font-size-lg: 24px;
+--track-font-size-xxl: 40px;
+--track-font-size-xl: 32px;
+
+--track-spacing-xl: 64px;
+--track-spacing-lg: 32px;
+--track-spacing-md: 16px;
+--track-spacing-sm: 8px;
+--track-spacing-xs: 4px;
+--track-spacing-xxs: 2px;
+
+--track-font-weight-regular: 400;
+--track-font-weight-medium: 500;
+--track-font-weight-semibold: 600;
+--track-font-weight-bold: 700;
+
+--track-line-height-compact: 120%;
+--track-line-height-near: 100%;
+--track-line-height-far: 148%;
+--track-line-height-further: 200%;
+
+--track-border-sm: 1.0px;
+--track-border-radius-sm: 4px;
+--track-border-lg: 1.6px;
+--track-border-radius-lg: 8px;
+
+--track-shadow-lg: 0px 8px 32px -4px rgba(0, 0, 0, 0.16);
+--track-shadow-sm: 0px 1px 2px  rgba(0, 0, 0, 0.1);
+}
