@@ -1,16 +1,12 @@
 import * as components from "./components";
-// import { use } from "./utils/plugins";
 
 const TrackUI = {
   install(Vue) {
-    // Set Components
-    for (let componentKey in components) {
-      Vue.use(components[componentKey]);
+    for (let key in components) {
+      Vue.use(components[key]);
     }
   },
 };
-
-// use(TrackUI);
 
 export default TrackUI;
 

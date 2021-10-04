@@ -1,7 +1,7 @@
 <template>
   <t-hello />
+  <t-checkbox label="Checkbox" />
   <t-counter />
-  <TCounter />
 </template>
 
 <script>

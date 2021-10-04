@@ -1,0 +1,11 @@
+body {
+  font-family: var(--track-font-family-base), sans-serif;
+  line-height: 1;
+}
+
+.card-title {
+  color: var(--track-color-bluegray-70);
+  font-size: var(--track-font-size-sm);
+  line-height: var(--track-line-height-compact);
+  font-weight: var(--track-font-weight-medium);
+}

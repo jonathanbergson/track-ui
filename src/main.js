@@ -1,8 +1,6 @@
 import { createApp } from "vue";
 import Demo from "./Demo.vue";
-// import Counter from "./components/counter";
-// import Hello from "./components/hello";
-import TrackUI from ".";
+import TrackUI, { Checkbox } from ".";
+import "./css/commons.css";
 
-createApp(Demo).use(TrackUI).mount("#app");
-// createApp(App).use(Counter).use(Hello).mount("#app");
+createApp(Demo).use(TrackUI).use(Checkbox).mount("#app");

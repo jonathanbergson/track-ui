@@ -1,35 +1,4 @@
 @import "./_tokens.css";
 @import "./_helpers.css";
-
-@font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/Inter-Regular.ttf") format("ttf");
-  font-weight: var(--track-font-weight-regular);
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/Inter-Medium.ttf") format("ttf");
-  font-weight: var(--track-font-weight-medium);
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/Inter-SemiBold.ttf") format("ttf");
-  font-weight: var(--track-font-weight-semibold);
-}
-@font-face {
-  font-family: "Inter";
-  src: url("../assets/fonts/Inter-Bold.ttf") format("ttf");
-  font-weight: var(--track-font-weight-bold);
-}
-
-body {
-  font-family: var(--track-font-family-base), sans-serif;
-  line-height: 1;
-}
-
-.card-title {
-  color: var(--track-color-bluegray-70);
-  font-size: var(--track-font-size-sm);
-  line-height: var(--track-line-height-compact);
-  font-weight: var(--track-font-weight-medium);
-}
+@import "./_fontface.css";
+@import "./_reset.css";
