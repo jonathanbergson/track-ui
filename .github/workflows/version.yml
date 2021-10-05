@@ -16,23 +16,26 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      # - name: Old package version
-      #   run: npm show ./ version
+      - name: Old package version
+        uses: actions/setup-node@v1
+        run: npm show ./ version
 
-      # - name: Bump Version
-      #   uses: phips28/gh-action-bump-version@master
-      #   env:
-      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-      #   with:
-      #     tag-prefix: 'v'
-      #     major-wording:  'major,BREAKING CHANGE'
-      #     minor-wording:  'minor,feat'
-      #     patch-wording:  'patch,fix,build,ci,docs,perf,refactor,style,test'
+      - name: Bump Version
+        uses: phips28/gh-action-bump-version@master
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          tag-prefix: 'v'
+          major-wording:  'major,BREAKING CHANGE'
+          minor-wording:  'minor,feat'
+          patch-wording:  'patch,fix,build,ci,docs,perf,refactor,style,test'
 
-      # - name: New package version
-      #   run: npm show ./ version
+      - name: New package version
+        uses: actions/setup-node@v1
+        run: npm show ./ version
 
-      - uses: actions/setup-node@v1
+      - name: Authenticate with GitHub
+        uses: actions/setup-node@v1
         with:
           node-version: 14
           registry-url: https://npm.pkg.github.com/
