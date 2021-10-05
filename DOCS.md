@@ -16,8 +16,8 @@
   &.is-visited, &:visited {}
 
   /* STATUS */
-  &.is-checked {}
-  &.is-disabled {}
+  &.is-checked, &:checked {}
+  &.is-disabled, &[disabled] {}
   &.is-loading {}
   &.is-selected {}
 
