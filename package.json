@@ -1,7 +1,7 @@
 {
   "name": "@jonathanbergson/track-ui",
   "version": "1.2.2",
-  "private": true,
+  "private": false,
   "repository": "git@github.com:jonathanbergson/track-ui.git",
   "scripts": {
     "demo": "vue-cli-service serve ./demo/main.js",
