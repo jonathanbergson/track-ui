@@ -11,20 +11,13 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout source code
-        uses: actions/checkout@v2
-        with:
-          ref: ${{ github.ref }}
+      - name: Checkout
+        uses: actions/checkout@v2.3.1
 
-      - name: cat package.json
-        run: cat ./package.json
+      - name: Old package version
+        run: npm show ./ version
 
-      - name: Setup Node.js
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-
-      - name: Automated Version Bump
+      - name: Bump Version
         uses: phips28/gh-action-bump-version@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
@@ -34,5 +27,8 @@ jobs:
           minor-wording:  'minor,feat'
           patch-wording:  'patch,fix,build,ci,docs,perf,refactor,style,test'
 
-      - name: cat package.json
-        run: cat ./package.json
+      - name: New package version
+        run: npm show ./ version
+
+      - name: Publish NPM package
+        run: npm publish
