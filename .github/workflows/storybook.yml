@@ -6,7 +6,7 @@ on:
       - main
 
 jobs:
-  build-and-deploy:
+  deploy-storybook:
     name: Deploy Storybook
     runs-on: ubuntu-latest
 
