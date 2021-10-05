@@ -16,9 +16,8 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      - name: Old package version
-        uses: actions/setup-node@v1
-        run: npm show ./ version
+      # - name: Old package version
+      #   run: npm show ./ version
 
       - name: Bump Version
         uses: phips28/gh-action-bump-version@master
@@ -30,9 +29,8 @@ jobs:
           minor-wording:  'minor,feat'
           patch-wording:  'patch,fix,build,ci,docs,perf,refactor,style,test'
 
-      - name: New package version
-        uses: actions/setup-node@v1
-        run: npm show ./ version
+      # - name: New package version
+      #   run: npm show ./ version
 
       - name: Authenticate with GitHub
         uses: actions/setup-node@v1
