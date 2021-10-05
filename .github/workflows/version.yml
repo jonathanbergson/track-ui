@@ -16,6 +16,13 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
+      - name: Authenticate with GitHub
+        uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://npm.pkg.github.com/
+          scope: '@jonathanbergson'
+
       - name: Old package version
         run: npm view ./ version
 
@@ -31,13 +38,6 @@ jobs:
 
       # - name: New package version
       #   run: npm show ./ version
-
-      - name: Authenticate with GitHub
-        uses: actions/setup-node@v1
-        with:
-          node-version: 14
-          registry-url: https://npm.pkg.github.com/
-          scope: '@jonathanbergson'
 
       - name: Publish NPM package
         run: npm publish
