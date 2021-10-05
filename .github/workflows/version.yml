@@ -19,18 +19,20 @@ jobs:
       # - name: Old package version
       #   run: npm show ./ version
 
-      - name: Bump Version
-        uses: phips28/gh-action-bump-version@master
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          tag-prefix: 'v'
-          major-wording:  'major,BREAKING CHANGE'
-          minor-wording:  'minor,feat'
-          patch-wording:  'patch,fix,build,ci,docs,perf,refactor,style,test'
+      # - name: Bump Version
+      #   uses: phips28/gh-action-bump-version@master
+      #   env:
+      #     GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+      #   with:
+      #     tag-prefix: 'v'
+      #     major-wording:  'major,BREAKING CHANGE'
+      #     minor-wording:  'minor,feat'
+      #     patch-wording:  'patch,fix,build,ci,docs,perf,refactor,style,test'
 
       # - name: New package version
       #   run: npm show ./ version
 
       - name: Publish NPM package
         run: npm publish
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
