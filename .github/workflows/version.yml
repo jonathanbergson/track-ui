@@ -16,8 +16,8 @@ jobs:
         with:
           ref: ${{ github.ref }}
 
-      # - name: Old package version
-      #   run: npm show ./ version
+      - name: Old package version
+        run: npm view ./ version
 
       - name: Bump Version
         uses: phips28/gh-action-bump-version@master
