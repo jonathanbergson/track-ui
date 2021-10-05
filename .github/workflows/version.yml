@@ -1,28 +1,31 @@
-name: "Bump Version"
+name: Bump Version
 
 on:
   push:
     branches:
-      - "main"
+      - main
 
 jobs:
   bump-version:
-    name: "Bump Version on main"
+    name: Bump Version
     runs-on: ubuntu-latest
 
     steps:
-      - name: "Checkout source code"
-        uses: "actions/checkout@v2"
+      - name: Checkout source code
+        uses: actions/checkout@v2
         with:
           ref: ${{ github.ref }}
-      - name: "cat package.json"
+
+      - name: cat package.json
         run: cat ./package.json
-      - name: "Setup Node.js"
-        uses: "actions/setup-node@v1"
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v1
         with:
           node-version: 14
-      - name: "Automated Version Bump"
-        uses: "phips28/gh-action-bump-version@master"
+
+      - name: Automated Version Bump
+        uses: phips28/gh-action-bump-version@master
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -30,5 +33,6 @@ jobs:
           major-wording:  'major,BREAKING CHANGE'
           minor-wording:  'minor,feat'
           patch-wording:  'patch,fix,build,ci,docs,perf,refactor,style,test'
-      - name: "cat package.json"
+
+      - name: cat package.json
         run: cat ./package.json
