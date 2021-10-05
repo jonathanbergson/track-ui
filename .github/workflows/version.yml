@@ -32,6 +32,12 @@ jobs:
       # - name: New package version
       #   run: npm show ./ version
 
+      - uses: actions/setup-node@v1
+        with:
+          node-version: 14
+          registry-url: https://npm.pkg.github.com/
+          scope: '@jonathanbergson'
+
       - name: Publish NPM package
         run: npm publish
         env:
