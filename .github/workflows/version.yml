@@ -27,7 +27,5 @@ jobs:
           tag-prefix: 'v'
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-        with:
-          default: prerelease
       - name: "cat package.json"
         run: cat ./package.json
