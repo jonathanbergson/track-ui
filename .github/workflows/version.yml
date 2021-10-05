@@ -25,6 +25,8 @@ jobs:
 
       - name: Old package version
         run: npm view ./ version
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Bump Version
         uses: phips28/gh-action-bump-version@master
