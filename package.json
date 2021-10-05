@@ -1,5 +1,5 @@
 {
-  "name": "track-ui",
+  "name": "@jonathanbergson/track-ui",
   "version": "1.2.0",
   "private": true,
   "scripts": {
@@ -11,6 +11,11 @@
     "storybook:build": "build-storybook -o ./docs",
     "test:unit": "vue-cli-service test:unit"
   },
+  "main": "./src/index.js",
+  "files": [
+    "dist/*",
+    "src/*"
+  ],
   "dependencies": {
     "core-js": "^3.6.5",
     "vue": "^3.0.0"
