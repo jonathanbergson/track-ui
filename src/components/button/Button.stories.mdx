@@ -1,6 +1,19 @@
 import { Meta, Story } from '@storybook/addon-docs';
 import Button from "./Button"
 
+<Meta title="Components/Button" component={Button} />
+
 # Botões
 
 Corrigi uma versão na doc
+
+<Story name="Default">
+  {() => {
+    return {
+      components: { Button },
+      template: `
+        <Button />
+      `,
+    };
+  }}
+</Story>
