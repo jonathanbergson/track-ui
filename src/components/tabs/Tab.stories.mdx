@@ -1,0 +1,23 @@
+import { Meta, Story } from '@storybook/addon-docs';
+import Tab from "./Tab"
+import Tabs from "./Tabs"
+
+<Meta title="Components/Tabs" component={Tab} />
+
+# Tabs
+
+<Story name="Basic">
+  {() => {
+    return {
+      components: { Tab, Tabs },
+      template: `
+        <Tabs>
+          <Tab label="Selected" type="selected" />
+          <Tab label="Default" />
+          <Tab label="Disabled" type="disabled" />
+          <Tab label="Error" type="error" />
+        </Tabs>
+      `,
+    };
+  }}
+</Story>
